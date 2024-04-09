@@ -5,37 +5,69 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CalcTest {
     public static void main(String args[]){
+        try {
         System.setProperty("webdriver.chrome.driver", "D:\\chromedriver-win64\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("./Calculator-Test-Automation/index.html");
+        driver.get("D:\\Codes\\Calculator-Test-Automation\\Calculator-Test-Automation\\index.html");
         WebElement textBox=driver.findElement(By.id("result"));
 
         int number1=30, number2=5;
+        WebElement seven=driver.findElement(By.id("seven"));
+        WebElement nine=driver.findElement(By.id("nine"));
         WebElement eq=driver.findElement(By.id("equal"));
+        WebElement clear=driver.findElement(By.id("clear"));
         
-        textBox.sendKeys(Integer.toString(number1));
+        // textBox.sendKeys(Integer.toString(number1));
+        seven.click();
+        Thread.sleep(1000);
         WebElement add=driver.findElement(By.id("add"));
         add.click();
-        textBox.sendKeys(Integer.toString(number2));
+        Thread.sleep(1000);
+        nine.click();
+        Thread.sleep(1000); // Wait for 3 seconds
         eq.click();
+        System.out.println("Add");
+        Thread.sleep(1000);
+        clear.click();
 
-        textBox.sendKeys(Integer.toString(number1));        
+        seven.click();
+        Thread.sleep(1000);
         WebElement sub=driver.findElement(By.id("sub"));
         sub.click();
-        textBox.sendKeys(Integer.toString(number2));
+        Thread.sleep(1000);
+        nine.click();
+        Thread.sleep(1000); // Wait for 3 seconds
         eq.click();
+        System.out.println("Subtraction");
+        Thread.sleep(1000);
+        clear.click();
 
-        textBox.sendKeys(Integer.toString(number1));        
-        WebElement multi=driver.findElement(By.id("multi"));
-        multi.click();
-        textBox.sendKeys(Integer.toString(number2));
+        seven.click();
+        Thread.sleep(1000);
+        WebElement mul=driver.findElement(By.id("multi"));
+        mul.click();
+        Thread.sleep(1000);
+        nine.click();
+        Thread.sleep(1000); // Wait for 3 seconds
         eq.click();
+        System.out.println("Multiplication");
+        Thread.sleep(1000);
+        clear.click();
 
-        textBox.sendKeys(Integer.toString(number1));        
+        seven.click();
+        Thread.sleep(1000);
         WebElement div=driver.findElement(By.id("divide"));
         div.click();
-        textBox.sendKeys(Integer.toString(number2));
+        Thread.sleep(1000);
+        nine.click();
+        Thread.sleep(1000); // Wait for 3 seconds
         eq.click();
+        System.out.println("Division");
+        Thread.sleep(1000);
+        clear.click();
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
     }
 }
