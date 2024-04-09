@@ -10,22 +10,19 @@ public class CalcTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("D:\\Codes\\Calculator-Test-Automation\\Calculator-Test-Automation\\index.html");
-        WebElement textBox=driver.findElement(By.id("result"));
 
-        int number1=30, number2=5;
         WebElement seven=driver.findElement(By.id("seven"));
         WebElement nine=driver.findElement(By.id("nine"));
         WebElement eq=driver.findElement(By.id("equal"));
         WebElement clear=driver.findElement(By.id("clear"));
         
-        // textBox.sendKeys(Integer.toString(number1));
         seven.click();
         Thread.sleep(1000);
         WebElement add=driver.findElement(By.id("add"));
         add.click();
         Thread.sleep(1000);
         nine.click();
-        Thread.sleep(1000); // Wait for 3 seconds
+        Thread.sleep(1000); 
         eq.click();
         System.out.println("Add");
         Thread.sleep(1000);
@@ -37,7 +34,7 @@ public class CalcTest {
         sub.click();
         Thread.sleep(1000);
         nine.click();
-        Thread.sleep(1000); // Wait for 3 seconds
+        Thread.sleep(1000); 
         eq.click();
         System.out.println("Subtraction");
         Thread.sleep(1000);
@@ -49,7 +46,7 @@ public class CalcTest {
         mul.click();
         Thread.sleep(1000);
         nine.click();
-        Thread.sleep(1000); // Wait for 3 seconds
+        Thread.sleep(1000); 
         eq.click();
         System.out.println("Multiplication");
         Thread.sleep(1000);
@@ -61,7 +58,7 @@ public class CalcTest {
         div.click();
         Thread.sleep(1000);
         nine.click();
-        Thread.sleep(1000); // Wait for 3 seconds
+        Thread.sleep(1000); 
         eq.click();
         System.out.println("Division");
         Thread.sleep(1000);
