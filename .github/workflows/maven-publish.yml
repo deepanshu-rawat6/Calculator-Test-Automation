@@ -30,8 +30,10 @@ jobs:
     - name: Set up Maven
       uses: actions/setup-java@v2
       with:
-        distribution: 'maven'
         java-version: '17'
+    
+    - name: Maven Setup
+      run: sudo apt install maven
 
     - name: Run the Code
       run: mvn clean test
